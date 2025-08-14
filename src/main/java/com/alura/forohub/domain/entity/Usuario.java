@@ -1,6 +1,13 @@
 package com.alura.forohub.domain.entity;
 
-public class Usuario {
-    Long usuarioId;
+import jakarta.persistence.*;
 
+@Entity
+@Table(name = "Usuarios")
+public class Usuario {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    Long usuarioId;
+    String contrasena;
+    String email;
 }
