@@ -8,6 +8,9 @@ public record CrearUsuarioRequest(
         String nombreUsuario,
         @NotBlank
         String contrasena,
+        @NotBlank
+        String nombre,
+        @NotBlank
         @Email
         String email
 ) {

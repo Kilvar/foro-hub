@@ -48,10 +48,10 @@ public class TemaService {
     }
 
     @Transactional
-    public DatosTemaEliminado eliminarTema(Long temaId) {
+    public String eliminarTema(Long temaId) {
         Tema t = repo.findById(temaId).orElseThrow(()-> new TemaNotFoundException(temaId));
         String nombreTema = t.getTitulo();
         repo.deleteById(temaId);
-        return new DatosTemaEliminado("El tema '" + nombreTema + "' fue eliminado");
+        return nombreTema;
     }
 }

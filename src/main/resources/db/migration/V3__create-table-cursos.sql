@@ -1,0 +1,8 @@
+CREATE TABLE Cursos(
+curso_id SERIAL PRIMARY KEY,
+nombre_curso VARCHAR(300) UNIQUE NOT NULL,
+nombre_categoria VARCHAR(100) NOT NULL
+);
+
+ALTER TABLE Temas
+ADD COLUMN curso_id INTEGER REFERENCES Cursos(curso_id);

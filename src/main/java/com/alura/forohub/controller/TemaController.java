@@ -52,8 +52,9 @@ public class TemaController {
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<DatosTemaEliminado> eliminarTema(@PathVariable Long temaId) {
-        return ResponseHandler.buildResponse("Tema eliminado con exito", HttpStatus.NO_CONTENT,
-                service.eliminarTema(temaId));
+    public ResponseEntity<String> eliminarTema(@PathVariable Long temaId) {
+        String nombre = service.eliminarTema(temaId);
+        return ResponseHandler.buildResponse("Tema eliminado con exito: " + nombre, HttpStatus.NO_CONTENT,
+                null);
     }
 }
