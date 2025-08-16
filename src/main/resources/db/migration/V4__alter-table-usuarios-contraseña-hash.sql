@@ -1,0 +1,2 @@
+ALTER TABLE Usuarios
+ALTER COLUMN contrasena TYPE VARCHAR(255)
