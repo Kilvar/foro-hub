@@ -1,7 +1,7 @@
-package com.alura.forohub.exception.handler;
+package com.alura.forohub.infra.exception.handler;
 
-import com.alura.forohub.exception.CustomApiException;
-import com.alura.forohub.response.ResponseHandler;
+import com.alura.forohub.infra.exception.CustomApiException;
+import com.alura.forohub.infra.response.ResponseHandler;
 import org.hibernate.exception.ConstraintViolationException;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.http.HttpStatus;
@@ -11,8 +11,6 @@ import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
-import java.sql.SQLException;
-import java.sql.SQLIntegrityConstraintViolationException;
 import java.util.List;
 
 @RestControllerAdvice

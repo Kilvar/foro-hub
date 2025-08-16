@@ -2,10 +2,10 @@ package com.alura.forohub.dto;
 
 import jakarta.validation.constraints.NotBlank;
 
-public record CrearCursoRequest(
+public record LoginRequest(
         @NotBlank
-        String nombreCurso,
+        String nombre,
         @NotBlank
-        String nombreCategoria)
-{
+        String contrasena
+) {
 }

@@ -5,15 +5,12 @@ import com.alura.forohub.domain.repository.TemaRepository;
 import com.alura.forohub.dto.ActualizarTemaRequest;
 import com.alura.forohub.dto.CrearTemaRequest;
 import com.alura.forohub.dto.DatosTema;
-import com.alura.forohub.dto.DatosTemaEliminado;
-import com.alura.forohub.exception.TemaNotFoundException;
+import com.alura.forohub.infra.exception.TemaNotFoundException;
 import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
-
-import java.util.List;
 
 @Service
 public class TemaService {

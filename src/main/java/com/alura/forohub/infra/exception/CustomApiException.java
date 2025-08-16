@@ -1,4 +1,4 @@
-package com.alura.forohub.exception;
+package com.alura.forohub.infra.exception;
 
 import lombok.Getter;
 import org.springframework.http.HttpStatus;
