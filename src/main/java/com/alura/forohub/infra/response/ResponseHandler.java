@@ -1,4 +1,4 @@
-package com.alura.forohub.response;
+package com.alura.forohub.infra.response;
 
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatusCode;

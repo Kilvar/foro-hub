@@ -4,9 +4,10 @@ import com.alura.forohub.domain.entity.Curso;
 import com.alura.forohub.domain.repository.CursoRepository;
 import com.alura.forohub.dto.CrearCursoRequest;
 import com.alura.forohub.dto.DatosCurso;
-import com.alura.forohub.exception.CursoNotFoundException;
-import com.alura.forohub.response.ResponseHandler;
+import com.alura.forohub.infra.exception.CursoNotFoundException;
+import com.alura.forohub.infra.response.ResponseHandler;
 import jakarta.transaction.Transactional;
+import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -21,7 +22,7 @@ public class CursoController {
 
     @PostMapping("/")
     @Transactional
-    public ResponseEntity<DatosCurso> crearCurso(@RequestBody CrearCursoRequest datosCurso){
+    public ResponseEntity<DatosCurso> crearCurso(@RequestBody @Valid CrearCursoRequest datosCurso){
 
         return ResponseHandler.buildResponse("Curso creado con exito", HttpStatus.CREATED,
                 repo.save(new Curso(datosCurso)).getDTO());

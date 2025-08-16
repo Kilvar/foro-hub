@@ -1,4 +1,4 @@
-package com.alura.forohub.exception;
+package com.alura.forohub.infra.exception;
 
 import org.springframework.http.HttpStatus;
 

@@ -1,13 +1,10 @@
 package com.alura.forohub.controller;
 
-import com.alura.forohub.domain.entity.Tema;
-import com.alura.forohub.domain.repository.TemaRepository;
 import com.alura.forohub.domain.service.TemaService;
 import com.alura.forohub.dto.ActualizarTemaRequest;
 import com.alura.forohub.dto.CrearTemaRequest;
 import com.alura.forohub.dto.DatosTema;
-import com.alura.forohub.dto.DatosTemaEliminado;
-import com.alura.forohub.response.ResponseHandler;
+import com.alura.forohub.infra.response.ResponseHandler;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -16,8 +13,6 @@ import org.springframework.data.web.PageableDefault;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.List;
 
 @RestController
 @RequestMapping("api/temas")
