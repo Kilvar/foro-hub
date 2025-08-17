@@ -1,6 +1,7 @@
 CREATE TABLE Usuarios(
 usuario_id SERIAL PRIMARY KEY,
 nombre VARCHAR(100),
+nombre_usuario VARCHAR(200),
 contrasena VARCHAR(100),
 email VARCHAR(320)
 );

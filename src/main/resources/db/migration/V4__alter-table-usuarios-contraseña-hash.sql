@@ -1,3 +1,2 @@
 ALTER TABLE Usuarios
-ADD COLUMN nombre_usuario VARCHAR(200),
 ALTER COLUMN contrasena TYPE VARCHAR(255);
